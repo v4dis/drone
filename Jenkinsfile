@@ -1,9 +1,11 @@
 pipeline {
     agent any
-    stage('Maven Build & Test') {
-	steps {
-	    sh 'python python/dronelauncher.py'
-        }
+    stages {
+	stage('Launch launcher') {
+	    steps {
+		sh 'python python/dronelauncher.py'
+            }
+	}
     }
     
     post {
