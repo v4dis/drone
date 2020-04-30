@@ -3,7 +3,8 @@ pipeline {
     stages {
 	stage('Launch launcher') {
 	    steps {
-	    	sh 'uname -a' 
+	    	sh 'uname -a'
+		sh 'alias python=python3'		
 		sh 'which python'
 		sh 'python --version'
 		sh 'python3 --version'		
