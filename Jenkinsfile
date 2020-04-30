@@ -4,7 +4,8 @@ pipeline {
 	stage('Launch launcher') {
 	    steps {
 	    	sh 'uname -a' 
-		sh 'pip install serial_mock' 
+		sh 'which python'
+		sh 'python --version' 
 		sh 'python python/dronelauncher_python.py &'
 		sh 'sleep 60 ; exit'	
             }
